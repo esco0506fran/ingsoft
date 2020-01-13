@@ -154,7 +154,7 @@ public class GUI_RegistroUsuarios extends javax.swing.JFrame {
         );
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setText("BUSQUEDA Y EDITAR DE  USUARIOS:");
+        jLabel7.setText("BUSQUEDA Y EDICION DE  USUARIOS:");
 
         jLabel8.setText("Id Usuario :");
 

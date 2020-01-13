@@ -26,12 +26,16 @@ public class GUI_Principal extends javax.swing.JFrame {
         ventaBoletos = new javax.swing.JButton();
         reporteVentas = new javax.swing.JButton();
         reporteAcceso = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         menu_registroUsuario = new javax.swing.JMenuItem();
         menu_registroRutas = new javax.swing.JMenuItem();
         menu_ventaBoletos = new javax.swing.JMenuItem();
         menu_reporteVenta = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
 
         jMenuItem5.setText("jMenuItem5");
 
@@ -58,45 +62,52 @@ public class GUI_Principal extends javax.swing.JFrame {
 
         jDesktopPane1.setBackground(new java.awt.Color(204, 204, 255));
 
-        registroUsuario.setText("REGISTRO USUARIO");
+        registroUsuario.setText("REGISTRO DE USUARIOS");
         registroUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registroUsuarioActionPerformed(evt);
             }
         });
 
-        registroRutas.setText("REGISTRO RUTAS");
+        registroRutas.setText("REGISTRO DE RUTAS");
         registroRutas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registroRutasActionPerformed(evt);
             }
         });
 
-        registroPasajero.setText("REGISTRO PASAJERO");
+        registroPasajero.setText("REGISTRO DE PASAJERO");
         registroPasajero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registroPasajeroActionPerformed(evt);
             }
         });
 
-        ventaBoletos.setText("VENTA BOLETOS");
+        ventaBoletos.setText("VENTA DE BOLETOS");
         ventaBoletos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ventaBoletosActionPerformed(evt);
             }
         });
 
-        reporteVentas.setText("REPORTE VENTAS");
+        reporteVentas.setText("REPORTE DE VENTAS");
         reporteVentas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reporteVentasActionPerformed(evt);
             }
         });
 
-        reporteAcceso.setText("REPORTE ACCSESO");
+        reporteAcceso.setText("REPORTE DE ACCSESO");
         reporteAcceso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reporteAccesoActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("SALIR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -106,6 +117,7 @@ public class GUI_Principal extends javax.swing.JFrame {
         jDesktopPane1.setLayer(ventaBoletos, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(reporteVentas, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(reporteAcceso, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -113,20 +125,22 @@ public class GUI_Principal extends javax.swing.JFrame {
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ventaBoletos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(registroUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(13, 13, 13)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(ventaBoletos, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(reporteVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(reporteAcceso, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addComponent(registroUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
                         .addComponent(registroRutas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(registroPasajero, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                        .addComponent(registroPasajero))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reporteVentas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(reporteAcceso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,12 +155,14 @@ public class GUI_Principal extends javax.swing.JFrame {
                     .addComponent(ventaBoletos, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(reporteVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(reporteAcceso, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
         jMenu2.setText("Menu Principal");
 
-        menu_registroUsuario.setText("Resgistro de Usuarios");
+        menu_registroUsuario.setText("REGISTRO DE USUARIOS");
         menu_registroUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menu_registroUsuarioActionPerformed(evt);
@@ -154,14 +170,28 @@ public class GUI_Principal extends javax.swing.JFrame {
         });
         jMenu2.add(menu_registroUsuario);
 
-        menu_registroRutas.setText("Registro de Rutas");
+        menu_registroRutas.setText("REGISTRO DE RUTAS");
         jMenu2.add(menu_registroRutas);
 
-        menu_ventaBoletos.setText("Venta de Boletos");
+        menu_ventaBoletos.setText("VENTA DE BOLETOS");
+        menu_ventaBoletos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_ventaBoletosActionPerformed(evt);
+            }
+        });
         jMenu2.add(menu_ventaBoletos);
 
-        menu_reporteVenta.setText("Reporte Ventas");
+        menu_reporteVenta.setText("REPORTE DE VENTAS");
         jMenu2.add(menu_reporteVenta);
+
+        jMenuItem2.setText("REGISTRO DE PASAJERO");
+        jMenu2.add(jMenuItem2);
+
+        jMenuItem3.setText("REPORTE DE ACCESO");
+        jMenu2.add(jMenuItem3);
+
+        jMenuItem4.setText("SALIR");
+        jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
 
@@ -175,7 +205,9 @@ public class GUI_Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -195,7 +227,7 @@ public class GUI_Principal extends javax.swing.JFrame {
         b.setVisible(true);
         dispose();
     }//GEN-LAST:event_registroUsuarioActionPerformed
-
+    
     private void registroRutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroRutasActionPerformed
         // TODO add your handling code here:
         GUI_RegistroRutas c = new GUI_RegistroRutas();
@@ -231,6 +263,14 @@ public class GUI_Principal extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_reporteAccesoActionPerformed
 
+    private void menu_ventaBoletosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_ventaBoletosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menu_ventaBoletosActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -244,6 +284,7 @@ public class GUI_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -255,6 +296,9 @@ public class GUI_Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem menu_registroRutas;
     private javax.swing.JMenuItem menu_registroUsuario;

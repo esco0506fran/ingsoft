@@ -66,7 +66,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menu_registroUsuario">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Resgistro de Usuarios"/>
+                <Property name="text" type="java.lang.String" value="REGISTRO DE USUARIOS"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_registroUsuarioActionPerformed"/>
@@ -74,17 +74,35 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menu_registroRutas">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Registro de Rutas"/>
+                <Property name="text" type="java.lang.String" value="REGISTRO DE RUTAS"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menu_ventaBoletos">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Venta de Boletos"/>
+                <Property name="text" type="java.lang.String" value="VENTA DE BOLETOS"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_ventaBoletosActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menu_reporteVenta">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Reporte Ventas"/>
+                <Property name="text" type="java.lang.String" value="REPORTE DE VENTAS"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="REGISTRO DE PASAJERO"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="REPORTE DE ACCESO"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="SALIR"/>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -125,7 +143,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -142,23 +163,27 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="ventaBoletos" max="32767" attributes="0"/>
+                      <Component id="registroUsuario" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="ventaBoletos" min="-2" pref="150" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="reporteVentas" min="-2" pref="150" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="reporteAcceso" min="-2" pref="150" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="registroUsuario" min="-2" pref="150" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="registroRutas" min="-2" pref="150" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="registroPasajero" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="registroPasajero" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="reporteVentas" alignment="0" pref="150" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="reporteAcceso" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                  <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -177,7 +202,9 @@
                       <Component id="reporteVentas" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
                       <Component id="reporteAcceso" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <Component id="jButton1" min="-2" pref="51" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -185,7 +212,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="registroUsuario">
           <Properties>
-            <Property name="text" type="java.lang.String" value="REGISTRO USUARIO"/>
+            <Property name="text" type="java.lang.String" value="REGISTRO DE USUARIOS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registroUsuarioActionPerformed"/>
@@ -193,7 +220,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="registroRutas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="REGISTRO RUTAS"/>
+            <Property name="text" type="java.lang.String" value="REGISTRO DE RUTAS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registroRutasActionPerformed"/>
@@ -201,7 +228,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="registroPasajero">
           <Properties>
-            <Property name="text" type="java.lang.String" value="REGISTRO PASAJERO"/>
+            <Property name="text" type="java.lang.String" value="REGISTRO DE PASAJERO"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registroPasajeroActionPerformed"/>
@@ -209,7 +236,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="ventaBoletos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="VENTA BOLETOS"/>
+            <Property name="text" type="java.lang.String" value="VENTA DE BOLETOS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ventaBoletosActionPerformed"/>
@@ -217,7 +244,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="reporteVentas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="REPORTE VENTAS"/>
+            <Property name="text" type="java.lang.String" value="REPORTE DE VENTAS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reporteVentasActionPerformed"/>
@@ -225,10 +252,18 @@
         </Component>
         <Component class="javax.swing.JButton" name="reporteAcceso">
           <Properties>
-            <Property name="text" type="java.lang.String" value="REPORTE ACCSESO"/>
+            <Property name="text" type="java.lang.String" value="REPORTE DE ACCSESO"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reporteAccesoActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="SALIR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

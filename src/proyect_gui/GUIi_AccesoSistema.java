@@ -5,8 +5,8 @@ import javax.swing.JOptionPane;
 
 public class GUIi_AccesoSistema extends javax.swing.JFrame {
     
-    public static String user = "admin";
-    public static String pass = "1234";
+    public static String user = "";
+    public static String pass = "";
     
     public GUIi_AccesoSistema() {
         initComponents();

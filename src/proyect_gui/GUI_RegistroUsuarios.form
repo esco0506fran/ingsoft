@@ -237,7 +237,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="BUSQUEDA Y EDITAR DE  USUARIOS:"/>
+            <Property name="text" type="java.lang.String" value="BUSQUEDA Y EDICION DE  USUARIOS:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
