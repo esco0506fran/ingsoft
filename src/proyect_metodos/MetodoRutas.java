@@ -24,7 +24,7 @@ public class MetodoRutas {
     //guardar archivo txt
     public void guardarArchivoRutas(Rutas rutas){
         try {
-            FileWriter fw = new FileWriter ("C:\\Rutas.txt", true);
+            FileWriter fw = new FileWriter ("C:/Users/franc/Documents/Guardar datos/rutas.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
             pw.print(rutas.getId_Ruta());
@@ -52,7 +52,7 @@ public class MetodoRutas {
         //Crear vector con nombre apellido pasajero cedula edad
         DefaultTableModel mdlTablaR = new DefaultTableModel(cabeceras,0);
         try {
-            FileReader fr = new FileReader("C:\\Rutas.txt");
+            FileReader fr = new FileReader("C:/Users/franc/Documents/Guardar datos/rutas.txt");
             BufferedReader br = new BufferedReader(fr);
             String d;
             while ((d=br.readLine())!=null){
@@ -71,7 +71,7 @@ public class MetodoRutas {
    
     public Vector BuscarRuta(String unaRuta){
         try {
-            FileReader fr = new FileReader("C:\\Rutas.txt");
+            FileReader fr = new FileReader("C:/Users/franc/Documents/Guardar datos/rutas.txt");
             BufferedReader br = new BufferedReader(fr);
             String d;
             while ((d=br.readLine())!=null){

@@ -19,10 +19,9 @@ public class MetodoBoleto {
     Vector vPrincipal = new Vector();
     
     public void crearBoleto(Boleto unBoleto) {
-        
+        vPrincipal.addElement(unBoleto);
         //FALTA
-        
-    }
+          }
     
     public void guardarBoleto(Boleto unBoleto) {
         vPrincipal.addElement(unBoleto);
@@ -30,7 +29,19 @@ public class MetodoBoleto {
     
     //guardar archivo txt
     public void guardarArchivoBoleto(Pasajero pasajero){
-        
+        try {
+            FileWriter fw = new FileWriter ("C:\\Pasajero.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.print(pasajero.getNombre_pasajero());
+            pw.print("|"+pasajero.getApellido_pasajero());
+            pw.print("|"+pasajero.getTipo_pasajero());
+            pw.print("|"+pasajero.getCedula_pasajero());
+            pw.println("|"+pasajero.getEdad_pasajero());
+            pw.close();
+        } catch (IOException e){
+            JOptionPane.showMessageDialog(null, e);
+        }
         //FALTA
         
     }
